@@ -32,7 +32,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "jest",
-    "test:watch": "test -- --watch",
+    "test:watch": "jest --watch",
     "lint": "eslint src/**/*.{ts,tsx}"
   },
   "eslintConfig": {
