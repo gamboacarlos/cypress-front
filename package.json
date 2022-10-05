@@ -1,5 +1,5 @@
 {
-  "name": "client",
+  "name": "cypress-front",
   "version": "0.1.0",
   "private": true,
   "baseUrl": ".",
