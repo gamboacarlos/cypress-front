@@ -33,6 +33,8 @@
     "eject": "react-scripts eject",
     "test": "jest",
     "test:watch": "jest --watch",
+    "e2e": "cypress run --headed",
+    "e2e:watch": "cypress open",
     "lint": "eslint src/**/*.{ts,tsx}"
   },
   "eslintConfig": {

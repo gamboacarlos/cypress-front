@@ -4,7 +4,7 @@ describe('test app', () => {
         cy.viewport(1280, 768)
     })
 
-    it('should authenticate user', () => {
+    it('should authenticate & display clubs first page', () => {
         cy.visit('http://localhost:3000')
         cy.get('#email').type('fake.user@fake.com')
         cy.get('#password').type('123')
