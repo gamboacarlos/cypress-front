@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "id": "26c75c57-ab58-4255-b3b9-5a26bc038878",
+      "name": "Club de Prueba",
+      "foundationDate": "1992-12-14T16:22:13.254Z",
+      "avatar": "https://placeimg.com/315/292",
+      "favorite": false
+    },
+    {
+      "id": "02a30247-72b5-4610-8fc2-59cbe2de4237",
+      "name": "Blackpool",
+      "foundationDate": "1979-02-13T06:40:50.543Z",
+      "avatar": "https://placeimg.com/291/301",
+      "favorite": false
+    },
+    {
+      "id": "0acde1e6-09ef-4dda-9d9f-e84ea1d61609",
+      "name": "Newcastle United",
+      "foundationDate": "1965-02-08T02:04:05.530Z",
+      "avatar": "https://placeimg.com/317/311",
+      "favorite": false
+    },
+    {
+      "id": "a19e7cf9-174d-4fcc-b193-c518e7ede64c",
+      "name": "Alavés",
+      "foundationDate": "1990-12-04T19:54:59.437Z",
+      "avatar": "https://placeimg.com/308/315",
+      "favorite": false
+    },
+    {
+      "id": "a64a2610-34b2-4a65-b1f1-78e2346de73c",
+      "name": "Watford",
+      "foundationDate": "1955-04-12T19:12:30.330Z",
+      "avatar": "https://placeimg.com/316/292",
+      "favorite": false
+    },
+    {
+      "id": "bbd660f3-23e8-4bb5-bfb2-e8565b1589eb",
+      "name": "Levante",
+      "foundationDate": "1953-06-11T13:31:24.201Z",
+      "avatar": "https://placeimg.com/302/319",
+      "favorite": false
+    }
+  ],
+  "total": 13
+}
