@@ -2,7 +2,7 @@
 describe('test app', () => {
     beforeEach(() => {
         cy.viewport(1280, 768)
-        cy.visit('http://localhost:3000')
+        // cy.visit('http://localhost:3000')
     })
 
     it('should authenticate & display clubs first page', () => {
