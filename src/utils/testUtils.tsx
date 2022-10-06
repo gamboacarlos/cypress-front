@@ -3,14 +3,18 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from '../store/root.reducer';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
+import theme from '../themes/theme';
 
 export const store = createStore(rootReducer);
 
 // Store & Router wrapper ===============================================================
-export const StoreWrapper: FC<{ children: ReactNode }> = ({ children }) => (
-  <Router>
-    <Provider store={store}>{children}</Provider>
-  </Router>
+export const StoreWrapper: FC<{ children: any }> = ({ children }) => (
+  <ChakraProvider theme={theme}>
+    <Router>
+      <Provider store={store}>{children}</Provider>
+    </Router>
+  </ChakraProvider>
 );
 
 // Club data mock =======================================================================

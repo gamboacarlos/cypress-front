@@ -75,6 +75,7 @@ const ClubCard: FC<ClubData> = ({
             </Text>
           </Box>
           <Switch
+            data-testid="favorite-switch"
             colorScheme="magenta"
             size="sm"
             isChecked={checked}
