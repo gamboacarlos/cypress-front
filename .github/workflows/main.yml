@@ -1,23 +1,12 @@
-name: Tests
+name: Cypress Test
 on: [push]
 jobs:
-  Tests:
+  cypress-run:
     runs-on: ubuntu-20.04
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
-      - uses: actions/checkout@v3.1.0
-        name: Use Node.js ${{ matrix.node-version }}
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v3.1.0
+      - name: Cypress.io
+        uses: cypress-io/github-action@v4.2.0
         with:
-          node-version: ${{ matrix.node-version }}
-        name: npm install
-        run: npm ci
-        name: unit tests
-        run: npm run test
-        name: run dev server
-        run: npm start
-        name: e2e test
-        run: npm run e2e
-
+          start: npm start
