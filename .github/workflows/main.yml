@@ -1,15 +1,23 @@
 name: Cypress Test
 on: [push]
 jobs:
-  cypress-run:
+  tests:
     runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        node-version: 16.15.1
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3.1.0
-      - name: Run Jest
-        uses: stefanoeb/jest-action@1.0.4
-      - name: Cypress.io
-        uses: cypress-io/github-action@v4.2.0
+      - uses: actions/checkout@v3.1.0
+        name: Use Node.js ${{ matrix.node-version }}
+      - uses: actions/setup-node@v1
         with:
-          unit-test: npm run test
+          node-version: ${{ matrix.node-version }}
+      - name: npm install
+        run: npm ci
+      - name: tests
+        run: npm run test
+      - uses: cypress-io/github-action@v4.2.0
+        name: Cypress.io
+        with:
           start: npm start
