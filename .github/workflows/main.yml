@@ -1,9 +1,8 @@
-name: Cypress Test
+name: Tests
 on: [push]
 jobs:
   Tests:
     runs-on: ubuntu-20.04
-
     strategy:
       matrix:
         node-version: [16.x]
@@ -13,11 +12,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install
+        name: npm install
         run: npm ci
-      - name: tests
+        name: unit tests
         run: npm run test
-      - uses: cypress-io/github-action@v4.2.0
-        name: Cypress.io
-        with:
-          start: npm start
+        name: run dev server
+        run: npm start
+        name: e2e test
+        run: npm run e2e
+
